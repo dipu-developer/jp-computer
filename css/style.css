@@ -7,9 +7,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   width: 100%;
-  height:100%;
+  height: 100%;
 }
 .nav-title img {
   width: 50px;
@@ -20,8 +23,10 @@ body {
 .nav {
   height: 50px;
   width: 100%;
-  background-color: #a33ae0;
-  position: relative;
+  background-color: #572f87;
+  position: fixed;
+  z-index: 1;
+  top: 0;
 }
 
 .nav > .nav-header {
@@ -88,7 +93,7 @@ body {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #a200ff;
+    background-color: #572f87;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -97,7 +102,8 @@ body {
   }
   .nav > .nav-links > a {
     display: block;
-    width: 100%;
+    width: fit-content;
+    margin: auto;
   }
   .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
@@ -198,7 +204,7 @@ img {
   height: 200px;
 }
 #slider {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 /* ============================================ */
 
@@ -321,7 +327,7 @@ img {
   position: relative;
   background-color: #fff;
   border-radius: 20px;
-  height: 370px;
+  height: 320px;
   width: 296px;
   margin: 20px 0;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -335,7 +341,7 @@ img {
   z-index: 100;
 }
 .swiper {
-  width: 950px;
+  width: 800px;
 }
 section {
   position: relative;
@@ -498,4 +504,66 @@ section .card .about {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.text-footer {
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  color: white;
+  justify-content: center;
+  /* text-decoration: none; */
+  font-size: 12px;
+  background-color: #572f87;
+}
+.text-footer a{
+  text-decoration: none;
+  color: white;
+  margin: 0 10px ;
+}
+.frame {
+  border: 0;
+  border-radius: 20px;
+}
+.details {
+  display: flex;
+  margin: auto;
+  background-color: #572f87;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  flex-direction: row;
+  color: #fff;
+}
+.details .f {
+  display: inline-block;
+  margin: 0 0 0 0;
+}
+.details i {
+  margin-right: 2px;
+}
+/* .contact p {
+  display: block;
+  margin: 5px 0 0 22px;
+} */
+.details h2 {
+  margin: 20px 0px;
+}
+.details a {
+  text-decoration: none;
+  color: white;
+}
+.qlink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
 }
