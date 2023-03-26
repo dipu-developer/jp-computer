@@ -506,6 +506,7 @@ section .card .about {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 .text-footer {
   text-align: center;
