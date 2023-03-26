@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +9,30 @@
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .blink {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink{
+      to { opacity: .0; }
+    }
+    .flex {
+      display: block;
+    }
+    .flex p {
+      text-align: center;
+    }
+    .header-sub-title {
+      color: #ffffff;
+      font-family: 'Alkatra', cursive;
+      font-size: 2rem;
+      padding: 0.1em;
+    }
+  </style>
 </head>
 
 <body>
+  
   <div class="nav" id="home">
     <input type="checkbox" id="nav-check">
     <div class="nav-header">
@@ -29,18 +49,19 @@
     </div>
 
     <div class="nav-links">
-      <a href="#home">Home</a>
+      <a href="#slider">Home</a>
       <a href="#service">Service</a>
       <a href="#product">Product</a>
       <a href="#location">Contact Us</a>
+      <a href="tel:9033168609"><i class="fa-solid fa-phone" style="color: #ffffff; margin:0 10px"></i>90331 68609</a>
     </div>
   </div>
 
-
-
-  <!-- ======================================================== -->
-
   <div id="slider">
+    
+    <div class="slide">
+      <img src="img/banner.jpg">
+    </div>
     <div class="slide">
       <img src="img/slider1.jpg">
     </div>
@@ -48,67 +69,63 @@
     <div class="slide">
       <img src="img/slider2.jpg">
     </div>
-
-
-
-    <!--Controlling arrows-->
+    <div class="slide">
+      <img src="img/banner2.jpg">
+    </div>
+    <div class="slide">
+      <img src="img/banner3.png">
+    </div>
     <span class="controls" onclick="prevSlide(-1)" id="left-arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i>
     </span>
     <span class="controls" id="right-arrow" onclick="nextSlide(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i>
     </span>
   </div>
   <div id="dots-con">
-    <span class="dot"></span><span class="dot"></span>
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
   </div>
-
   <!-- ======================================================== -->
 
   <div class="heading" id="service">
     <h2>Service</h2>
   </div>
-  <div class="product">
-
-    <div class="cst1">
+  <div class="product1">
+    <div class="cst2">
+      <div class="icn">
+        <i class="fa-solid fa-screwdriver-wrench fa-flip" style="--fa-animation-duration: 3s;" ></i>
+      </div>
       <div class="cat-img">
-        <img src="img/repair-tools.gif" alt="NOt found" srcset="">
       </div>
       <div class="dis">
         <h4>Computer Repair</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
       </div>
     </div>
-    <div class="cst1">
-      <div class="cat-img">
-        <img src="img/delivery-truck.gif" alt="NOt found" srcset="">
+    <div class="cst2">
+      <div class="icn">
+        <i class="fa-solid fa-truck fa-flip" style="--fa-animation-duration: 3s;" ></i>
       </div>
       <div class="dis">
         <h4>Home Services</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
       </div>
     </div>
-    <div class="cst1">
-      <div class="cat-img">
-        <img src="img/time.gif" alt="" srcset="">
+    <div class="cst2">
+      <div class="icn">
+        <i class="fa-regular fa-clock fa-flip" style="--fa-animation-duration: 3s;" ></i>
       </div>
       <div class="dis">
-        <h4>Fast Service</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
+        <h4>Fast  Service</h4>
+        
       </div>
     </div>
-    <div class="cst1">
-      <div class="cat-img">
-        <img src="img/mail.gif" alt="" srcset="">
+    <div class="cst2">
+      <div class="icn">
+        <i class="fa-solid fa-envelope fa-flip" style="--fa-animation-duration: 3s;" ></i>
       </div>
       <div class="dis">
-        <h4>Quick Response</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
+        <h4>Quick Return</h4>
+        
       </div>
     </div>
-
   </div>
-  <!-- ======================================================== -->
-
-
 
   <div class="heading" id="product">
     <h2>Product</h2>
@@ -121,7 +138,7 @@
       </div>
       <div class="dis">
         <h4>Laptops</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
+        <button class="button-36" role="button" onclick="chat('Laptops')">Inquery</button>
       </div>
     </div>
     <div class="cst1">
@@ -130,7 +147,7 @@
       </div>
       <div class="dis">
         <h4>Switchs</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
+        <button class="button-36" role="button" onclick="chat('Switchs')">Inquery</button>
       </div>
     </div>
     <div class="cst1">
@@ -139,7 +156,7 @@
       </div>
       <div class="dis">
         <h4>CCTV Camera</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
+        <button class="button-36" role="button" onclick="chat('CCTV Camera')">Inquery</button>
       </div>
     </div>
     <div class="cst1">
@@ -148,7 +165,7 @@
       </div>
       <div class="dis">
         <h4>Printer</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
+        <button class="button-36" role="button" onclick="chat('Printer')">Inquery</button>
       </div>
     </div>
     <div class="cst1">
@@ -157,7 +174,7 @@
       </div>
       <div class="dis">
         <h4>Fiber Cables</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
+        <button class="button-36" role="button" onclick="chat('Fiber Cables')">Inquery</button>
       </div>
     </div>
     <div class="cst1">
@@ -166,7 +183,7 @@
       </div>
       <div class="dis">
         <h4>Computer Repair</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
+        <button class="button-36" role="button" onclick="chat('Computer Repair')">Inquery</button>
       </div>
     </div>
     <div class="cst1">
@@ -175,7 +192,7 @@
       </div>
       <div class="dis">
         <h4>Toner parts</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
+        <button class="button-36" role="button" onclick="chat('Toner parts')">Inquery</button>
       </div>
     </div>
     <div class="cst1">
@@ -184,7 +201,7 @@
       </div>
       <div class="dis">
         <h4>Power Backup Solutions</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
+        <button class="button-36" role="button" onclick="chat('Power Backup Solutions')">Inquery</button>
       </div>
     </div>
     <div class="cst1">
@@ -193,7 +210,7 @@
       </div>
       <div class="dis">
         <h4>All Hardware Parts</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
+        <button class="button-36" role="button" onclick="chat('All Hardware Parts')">Inquery</button>
       </div>
     </div>
     <div class="cst1">
@@ -201,8 +218,8 @@
         <img src="img/cpu.jpg" alt="" srcset="">
       </div>
       <div class="dis">
-        <h4>All Hardware Parts</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, similique?</p>
+        <h4>CPU</h4>
+        <button class="button-36" role="button" onclick="chat('CPU')">Inquery</button>
       </div>
     </div>
 
@@ -210,11 +227,6 @@
   <div class="heading">
     <h2>Brands</h2>
   </div>
-
-
-
-
-
 
   <!-- ====================     Swiper slide  ==================================== -->
   <div class="partner">
@@ -233,7 +245,6 @@
       </div>
     </marquee>
   </div>
-
 
   <!-- ====================     Customer Review  ==================================== -->
   <div class="heading" id="service">
@@ -352,10 +363,7 @@
     });
   </script>
 
-
   <!-- ====================     Customer Review  ==================================== -->
-
-
   <!-- ====================     LOcation  ==================================== -->
   <div class="heading" id="location">
     <h2>Location</h2>
@@ -367,18 +375,12 @@
       referrerpolicy="no-referrer-when-downgrade" class="frame"></iframe>
   </div>
   <!-- ====================     LOcation  ==================================== -->
-
-
-  <!-- ====================     Contact  ==================================== -->
-  <div class="heading" id="service">
-    <h2>Contact</h2>
-  </div>
   <!-- ====================     End Contact  ==================================== -->
 
   <footer>
     <div class="details">
       <div class="contact">
-        <h2>Contact</h2>
+        <p class="title">Contact</p>
         <div>
           <a href="https://goo.gl/maps/uiStPZfKHAnfqkK49">
             <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
@@ -391,11 +393,11 @@
           <a href="tel:9173556102">
             <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
           </a>
-          <p class="f"> <a href="tel:9173556102">+91 12345 67890</a></p>
+          <p class="f"> <a href="tel:90331686009">+91 90331 68609</a></p>
         </div>
       </div>
       <div class="qlink">
-        <h2>Quick Links</h2>
+        <p class="title">Quick Links</p>
         
       <a href="#home">Home</a>
       <a href="#service">Service</a>
@@ -407,18 +409,20 @@
       Copyright &copy; 2023 <a href="https://umargam.com/">SkyTech </a> - All right reserved
     </p>
   </footer>
-
-
-
-
-
-
-
-
   <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.min.js"></script>
   <script
     src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+    <script>
+      function chat(message) {
+        var url =
+          "https://wa.me/9033168609?text=" +
+          "Hello JP COMPUTERS"
+            +"%0a"  +
+            "I want to more about " + message;
+        window.open(url, "_blank").focus();
+      }
+    </script>
 </body>
 
 </html>
